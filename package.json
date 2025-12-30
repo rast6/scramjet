@@ -10,6 +10,7 @@
 		"url": "https://github.com/MercuryWorkshop/scramjet"
 	},
 	"scripts": {
+		"prebuild": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh",
 		"build": "pnpm run build:wasm && pnpm run build:web",
     "build:wasm": "wasm-pack build rewriter/wasm --out-dir out",
     "build:web": "rspack build",
