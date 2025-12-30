@@ -12,7 +12,7 @@
 	"scripts": {
 		"build": "pnpm run build:wasm && pnpm run build:web",
     "build:wasm": "wasm-pack build rewriter/wasm --out-dir out",
-    "build:web": "rspack build"
+    "build:web": "rspack build",
 		"build:types": "rslib build && rm -rf dist/temp",
 		"build:all": "npm run build && npm run build:types",
 		"rewriter:build": "cd rewriter/wasm/ && bash build.sh && cd ../../",
